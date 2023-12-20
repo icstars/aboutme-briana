@@ -28,7 +28,6 @@ function displayUser() {
     }
 }
 
-// Main loop
 while (true) {
     addNewUser();
 
