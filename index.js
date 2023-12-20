@@ -1,3 +1,4 @@
+
 function createUser(username, email, password) {
     return { username, email, password };
 }
@@ -27,7 +28,6 @@ function displayUser() {
         console.log("User not found.");
     }
 }
-
 
 do {
     addNewUser();
