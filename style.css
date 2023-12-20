@@ -1,5 +1,22 @@
-h1 {   
-    font-size: large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:black;
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.2225%; /* Aspect Ratio */
+    margin-top: 1.6em;
+    margin-bottom: 0.9em;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+    will-change: transform;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
