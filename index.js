@@ -2,6 +2,7 @@ function createUser(username, email, password) {
     return { username, email, password };
 }
 
+
 let users = [];
 
 function addNewUser() {
@@ -27,9 +28,9 @@ function displayUser() {
     let foundUser = users.find(user => user.username === username);
 
     if (foundUser) {
-        console.log("User found:", foundUser.username, foundUser.email);
+        alert("User found:\nUsername: " + foundUser.username + "\nEmail: " + foundUser.email);
     } else {
-        console.log("User not found.");
+        alert("User not found.");
     }
 }
 
@@ -37,6 +38,7 @@ function displayUser() {
 do {
     addNewUser();
 } while (confirm("Do you want to make another user?"));
+
 
 do {
     displayUser();
