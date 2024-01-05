@@ -1,45 +1,10 @@
-function createUser(username, email, password) {
-    return { username, email, password };
-}
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+event.preventDefault(); // Prevents the default form submission action
 
+const firstName = document.getElementById('firstName').value; // Retrieves the first name
+const email = document.getElementById('email').value; // Retrieves the email
 
-let users = [];
+console.log(`Email: ${email}, First Name: ${firstName}`); // Logs the information to the console
 
-function addNewUser() {
-    let username = prompt("Enter username:");
-    if (!username) return; 
-
-    let email = prompt("Enter email:");
-    if (!email) return; 
-
-    let password = prompt("Enter password:");
-    if (!password) return; 
-
-    let newUser = createUser(username, email, password);
-    users.push(newUser);
-
-    console.log("User added:", newUser);
-}
-
-function displayUser() {
-    let username = prompt("Enter the username of the user you want to see:");
-    if (!username) return; // Exit if no input is given
-
-    let foundUser = users.find(user => user.username === username);
-
-    if (foundUser) {
-        alert("User found:\nUsername: " + foundUser.username + "\nEmail: " + foundUser.email);
-    } else {
-        alert("User not found.");
-    }
-}
-
-
-do {
-    addNewUser();
-} while (confirm("Do you want to make another user?"));
-
-
-do {
-    displayUser();
-} while (confirm("Do you want to see another user?"));
+alert(`Hi, ${firstName}, we'll be in touch!`); // Displays an alert with a personalized message
+});
