@@ -1,26 +1,10 @@
-function getUserChoice() {
-   
-     let input = prompt("Choose rock, paper, or scissors");
-    return input.toLowerCase();
-    }
-     function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"];
-    let randomIndex = Math.floor(Math.random() * 3);
-     return choices[randomIndex];
-    }
-    
-    function determineWinner(userChoice, computerChoice) {
-    if (userChoice === computerChoice) {
-     return "It's a tie!";
-        }}
-    
-    if (userChoice === "rock") {
-     if (computerChoice === "scissors")} {
-    return "You win!";
-     } else {
-    return "Computer wins"
-}
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+event.preventDefault(); // Prevents the default form submission action
 
+const firstName = document.getElementById('firstName').value; // Retrieves the first name
+const email = document.getElementById('email').value; // Retrieves the email
 
+console.log(`Email: ${email}, First Name: ${firstName}`); // Logs the information to the console
 
-
+alert(`Hi, ${firstName}, we'll be in touch!`); // Displays an alert with a personalized message
+});
